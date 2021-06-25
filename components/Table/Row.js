@@ -1,10 +1,12 @@
+import Image from 'next/image'
+
 const Row = ({ data, index }) => {
 
   const Profile = () => {
     const gender = (index + 1) % 2 === 0 ? 'men' : 'women';
     return (
       <div className="mr-2">
-        <img className="w-8 h-8 rounded-full" src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}/>
+        <Image className="w-8 h-8 rounded-full" src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}/>
       </div>
     )
   }
