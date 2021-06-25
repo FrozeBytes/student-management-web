@@ -43,7 +43,10 @@ const Input = ({ title, placeholder, addCB }) => {
           onKeyDown={onKeyDown}
           value={email}
         />
-        <AddButton onClick={onAddClick} />
+        <AddButton
+          data-testid='form-add-email-btn'
+          onClick={onAddClick}
+        />
       </div>
     </div>
   )

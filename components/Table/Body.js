@@ -9,7 +9,12 @@ const Body = ({ rows }) => {
       }
       {
         rows.map((row, i) => (
-          <TableRow data={row} index={i} key={i} />
+          <TableRow
+            data-testid={`tbl-row=-${i}`}
+            data={row}
+            index={i}
+            key={i}
+          />
         ))
       }
     </tbody>

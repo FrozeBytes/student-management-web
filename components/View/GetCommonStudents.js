@@ -24,8 +24,12 @@ const GetCommonStudents = () => {
   return (
     <main className="w-full">
       <div className="sm:w-5/6 md:w-full md:grid md:grid-cols-2">
-        <Form onSubmitCB={getCommonStudents} />
+        <Form
+          data-testid='view-form'
+          onSubmitCB={getCommonStudents}
+        />
         <Table
+          data-testid='view-table'
           columns={['Students']}
           rows={students}
         />

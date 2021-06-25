@@ -14,7 +14,7 @@ const Form = ({ onSubmitCB }) => {
     setEmails(currentEmails => currentEmails.filter((cEmail) => cEmail !== email));
   }
 
-  const onSubmit = async () => {
+  const onSubmit = () => {
     onSubmitCB(emails);
   }
 
@@ -31,6 +31,7 @@ const Form = ({ onSubmitCB }) => {
         </div>
         <div className="px-9 pb-9 md:w-full sm:w-5/6">
           <SubmitButton
+            data-testid='form-submit-btn'
             onClick={onSubmit}
             text={'Get Common Students'}
             disabled={emails.length === 0}

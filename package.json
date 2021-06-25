@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --silent",
+    "test:coverage": "jest --silent --coverage"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -15,9 +17,17 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "autoprefixer": "^10.2.6",
+    "babel-jest": "^27.0.5",
+    "enzyme": "^3.11.0",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
+    "jest": "^27.0.5",
+    "jsdom": "16.6.0",
+    "jsdom-global": "3.0.2",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
   }

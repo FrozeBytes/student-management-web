@@ -9,6 +9,7 @@ const Row = ({ data, index }) => {
         <Image
           className="w-12 h-12 rounded-full mv-10"
           src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}
+          alt={'picture'}
           width={680}
           height={680}
           layout="responsive"
