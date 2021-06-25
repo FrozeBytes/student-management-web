@@ -5,8 +5,14 @@ const Row = ({ data, index }) => {
   const Profile = () => {
     const gender = (index + 1) % 2 === 0 ? 'men' : 'women';
     return (
-      <div className="mr-2">
-        <Image className="w-8 h-8 rounded-full" src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}/>
+      <div className="mr-2 w-10 ">
+        <Image
+          className="w-12 h-12 rounded-full mv-10"
+          src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}
+          width={680}
+          height={680}
+          layout="responsive"
+          />
       </div>
     )
   }
