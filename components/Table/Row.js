@@ -8,8 +8,8 @@ const Row = ({ data, index }) => {
       <div className="mr-2 w-10 ">
         <Image
           className="w-12 h-12 rounded-full mv-10"
-          src={`https://randomuser.me/api/portraits/${gender}/${index}.jpg`}
-          alt={'picture'}
+          src={`https://randomuser.me/api/portraits/${gender}/${index % 5}.jpg`}
+          alt={'pic'}
           width={680}
           height={680}
           layout="responsive"
