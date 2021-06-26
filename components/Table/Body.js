@@ -2,7 +2,7 @@ import TableRow from './Row';
 
 const Body = ({ rows }) => {
   return (
-    <tbody className="text-gray-600 text-sm font-light">
+    <tbody className="text-gray-600 flex flex-col text-sm font-light overflow-y-scroll max-h-96">
       {
         rows.length === 0 &&
         <TableRow />
