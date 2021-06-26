@@ -10,4 +10,10 @@ describe('Body Component', () => {
 
     expect(wrapper.text().includes('No students found')).toBe(true);
   });
+
+  it('should render without crashing', () => {
+    const wrapper = mount(<Body rows={['test@gmail.com']} />);
+
+    expect(wrapper.text().includes('test@gmail.com')).toBe(true);
+  });
 });

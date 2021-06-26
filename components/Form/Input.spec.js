@@ -21,8 +21,13 @@ describe('Input Component', () => {
     const mockCallBack = jest.fn();
     const wrapper = mount(<Input addCB={mockCallBack} title='title'/>);
 
+    wrapper.find('input').simulate('change', { target: { value: 'testgmail.com' } })
+    wrapper.find('button').simulate('click');
+    wrapper.find('input').simulate('change', { target: { value: 'test0@gmail.com' } })
+    wrapper.find('input').simulate('keydown', {key: 'Space'});
+    wrapper.find('input').simulate('keydown', {key: 'Enter'});
     wrapper.find('input').simulate('change', { target: { value: 'test@gmail.com' } })
     wrapper.find('button').simulate('click');
-    expect(mockCallBack.mock.calls.length).toEqual(1);
+    expect(mockCallBack.mock.calls.length).toEqual(2);
   });
 });
